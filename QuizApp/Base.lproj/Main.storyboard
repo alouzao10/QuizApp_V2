@@ -73,7 +73,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aCF-cp-7RP" secondAttribute="trailing" constant="151" id="7GH-mb-dng"/>
                             <constraint firstItem="4CX-K2-wsC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FID-7n-TBa"/>
                             <constraint firstItem="4CX-K2-wsC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="H4x-nF-4rm"/>
-                            <constraint firstItem="Wsn-5U-wnV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jkr-H4-VLq"/>
                             <constraint firstItem="cQn-Vb-VTO" firstAttribute="top" secondItem="4CX-K2-wsC" secondAttribute="top" id="KH5-5m-zWw"/>
                             <constraint firstItem="Wsn-5U-wnV" firstAttribute="top" secondItem="4CX-K2-wsC" secondAttribute="bottom" constant="8" id="PTo-F7-vrn"/>
                             <constraint firstItem="F9o-OR-riP" firstAttribute="top" secondItem="Wsn-5U-wnV" secondAttribute="bottom" constant="24" id="Rzz-Wj-W2k"/>
@@ -81,13 +80,16 @@
                             <constraint firstItem="aCF-cp-7RP" firstAttribute="top" secondItem="VcA-Nw-BJc" secondAttribute="bottom" constant="148" id="jLx-6u-TLT"/>
                             <constraint firstItem="F9o-OR-riP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kXu-Y1-ce6"/>
                             <constraint firstItem="VcA-Nw-BJc" firstAttribute="top" secondItem="F9o-OR-riP" secondAttribute="bottom" constant="8" id="uWs-vu-zwD"/>
+                            <constraint firstItem="Wsn-5U-wnV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yNT-zl-Zyh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xna-Mf-ctU"/>
                     <connections>
                         <outlet property="answerLabel" destination="F9o-OR-riP" id="tN2-3a-Kd3"/>
                         <outlet property="currentQuestionLabel" destination="4CX-K2-wsC" id="A9W-NN-xDO"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="FID-7n-TBa" id="6Qz-ef-Nn5"/>
                         <outlet property="nextQuestionLabel" destination="cQn-Vb-VTO" id="Qjr-W1-cCd"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="3dm-QV-mGg" id="jxA-VH-NQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
