@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet var nextQuestionLabel: UILabel!
     @IBOutlet var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
 
-
     @IBOutlet var answerLabel: UILabel!
     
     let questions: [String] = ["What is 7 + 7?", "What is the capitol of VT?", "What is cognac made from?"]
