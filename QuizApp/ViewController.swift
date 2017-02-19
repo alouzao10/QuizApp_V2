@@ -47,10 +47,15 @@ class ViewController: UIViewController {
     
     func animateLabelTransition(){
        
-        UIView.animate(withDuration:0.5, animations: {
-            self.currentQuestionLabel.alpha = 0
-            self.nextQuestionLabel.alpha = 1
-
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       options: [],
+                       animations: {
+                        self.currentQuestionLabel.alpha = 0
+                        self.nextQuestionLabel.alpha = 1
+        },
+                       completion: { _ in
+                        swap(&self.currentQuestionLabel,&self.nextQuestionLabel)
         })
     }
     
