@@ -14,7 +14,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var questionLabel: UILabel!
+    @IBOutlet var currentQuestionLabel: UILabel!
+    @IBOutlet var nextQuestionLabel: UILabel!
+
     @IBOutlet var answerLabel: UILabel!
     
     let questions: [String] = ["What is 7 + 7?", "What is the capitol of VT?", "What is cognac made from?"]
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
             currentQuestion = 0
         }
         let question: String = questions[currentQuestion]
-        questionLabel.text = question
+        nextQuestionLabel.text = question
         answerLabel.text = "???"
         animateLabelTransition()
         
@@ -40,19 +42,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = questions[currentQuestion]
+        currentQuestionLabel.text = questions[currentQuestion]
     }
     
     func animateLabelTransition(){
        
         UIView.animate(withDuration:0.5, animations: {
-            self.questionLabel.alpha = 1
+            self.currentQuestionLabel.alpha = 0
+            self.nextQuestionLabel.alpha = 1
+
         })
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        questionLabel.alpha = 0
+        nextQuestionLabel.alpha = 0
     }
     
 }
