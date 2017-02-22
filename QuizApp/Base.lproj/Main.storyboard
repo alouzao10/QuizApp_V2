@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,37 +47,34 @@
                                     <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eBl-fj-U3C"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCF-cp-7RP">
-                                <rect key="frame" x="167" y="385" width="41" height="30"/>
-                                <state key="normal" title="Finish"/>
-                                <connections>
-                                    <segue destination="SQf-eX-K0B" kind="modal" id="bTB-Le-xHR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-Vb-VTO">
                                 <rect key="frame" x="167" y="95" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCF-cp-7RP">
+                                <rect key="frame" x="167" y="560" width="41" height="30"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <segue destination="SQf-eX-K0B" kind="modal" id="bTB-Le-xHR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85166274950536469" blue="0.54836396519460506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aCF-cp-7RP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="151" id="2HC-Nw-i6K"/>
                             <constraint firstItem="cQn-Vb-VTO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3dm-QV-mGg"/>
-                            <constraint firstItem="aCF-cp-7RP" firstAttribute="top" secondItem="VcA-Nw-BJc" secondAttribute="bottom" constant="148" id="40O-xY-uV7"/>
                             <constraint firstItem="VcA-Nw-BJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Kt-jK-84X"/>
                             <constraint firstItem="VcA-Nw-BJc" firstAttribute="leading" secondItem="Wsn-5U-wnV" secondAttribute="leading" constant="3" id="5wm-mD-2VG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aCF-cp-7RP" secondAttribute="bottom" constant="252" id="64P-7R-9WV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aCF-cp-7RP" secondAttribute="trailing" constant="151" id="7GH-mb-dng"/>
                             <constraint firstItem="4CX-K2-wsC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FID-7n-TBa"/>
                             <constraint firstItem="4CX-K2-wsC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="H4x-nF-4rm"/>
                             <constraint firstItem="cQn-Vb-VTO" firstAttribute="top" secondItem="4CX-K2-wsC" secondAttribute="top" id="KH5-5m-zWw"/>
                             <constraint firstItem="Wsn-5U-wnV" firstAttribute="top" secondItem="4CX-K2-wsC" secondAttribute="bottom" constant="8" id="PTo-F7-vrn"/>
                             <constraint firstItem="F9o-OR-riP" firstAttribute="top" secondItem="Wsn-5U-wnV" secondAttribute="bottom" constant="24" id="Rzz-Wj-W2k"/>
                             <constraint firstItem="4CX-K2-wsC" firstAttribute="leading" secondItem="Wsn-5U-wnV" secondAttribute="leading" constant="37" id="dmw-2c-dFy"/>
-                            <constraint firstItem="aCF-cp-7RP" firstAttribute="top" secondItem="VcA-Nw-BJc" secondAttribute="bottom" constant="148" id="jLx-6u-TLT"/>
                             <constraint firstItem="F9o-OR-riP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kXu-Y1-ce6"/>
+                            <constraint firstItem="aCF-cp-7RP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oEA-Kj-B5B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aCF-cp-7RP" secondAttribute="bottom" constant="77" id="sYr-iY-ggT"/>
                             <constraint firstItem="VcA-Nw-BJc" firstAttribute="top" secondItem="F9o-OR-riP" secondAttribute="bottom" constant="8" id="uWs-vu-zwD"/>
                             <constraint firstItem="Wsn-5U-wnV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yNT-zl-Zyh"/>
                         </constraints>

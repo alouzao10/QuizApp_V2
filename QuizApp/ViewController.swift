@@ -1,6 +1,6 @@
 //
 
-// WORKING VERSION
+// WORKING VERSION V2
 
 //  ViewController.swift
 //  QuizApp
@@ -22,9 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet var answerLabel: UILabel!
     
     let questions: [String] = ["What is 7 + 7?", "What is the capitol of VT?", "What is cognac made from?"]
-    let answers: [String] = ["14", "Montpelier", "Grapes"]
+    let answers: [String] = ["14","Montpelier", "Grapes"]
     var currentQuestion: Int = 0
     
+    var screenWidth: CGFloat = 0.0 // = view.frame.width
     
     @IBAction func showNextQuestion(_ sender: UIButton){
         currentQuestion += 1
@@ -50,22 +51,37 @@ class ViewController: UIViewController {
     }
     
     func updateOffScreenLabel() {
-        let screenWidth = view.frame.width
-        nextQuestionLabelCenterXConstraint.constant = -screenWidth
+        screenWidth = view.frame.width
+        let space = UILayoutGuide()
+        space.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        print("In update: \(space.layoutFrame.width)")
+        nextQuestionLabelCenterXConstraint.constant = -space.layoutFrame.width
+        
     }
     
     func animateLabelTransition(){
         
         view.layoutIfNeeded()
+        
+        let space = UILayoutGuide()
+        view.addLayoutGuide(space)
        
-        let screenWidth = view.frame.width
-        self.nextQuestionLabelCenterXConstraint.constant = 0
-        self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+        screenWidth = view.frame.width
+        
+        print("In animate: \(screenWidth)")
+        space.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        //space.trailingAnchor.constraint(equalTo: space.leadingAnchor).isActive = true
+        //space.leadingAnchor.constraint(equalTo: space.trailingAnchor).isActive = true
+
+        print(space.layoutFrame.width)
+        
+        self.nextQuestionLabelCenterXConstraint.constant = screenWidth
+        self.currentQuestionLabelCenterXConstraint.constant += screenWidth //screenWidth
         
         UIView.animate(withDuration: 0.5,
                        delay: 0,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 0.5,
+                       usingSpringWithDamping: 2.5,
+                       initialSpringVelocity: 2.5,
                        options: [.curveLinear],
                        animations: {
                         self.currentQuestionLabel.alpha = 0
