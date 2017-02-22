@@ -64,6 +64,8 @@ class ViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5,
                        delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0.5,
                        options: [.curveLinear],
                        animations: {
                         self.currentQuestionLabel.alpha = 0
@@ -81,5 +83,14 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         nextQuestionLabel.alpha = 0
     }
+    
+   /* class func animate(withDuration duration: TimeInterval,
+                       delay: TimeInterval,
+                       usingSprintWithDamping dampingRatio: CGFloat,
+                       initialSpringVelocity velocity: CGFloat,
+                       options: UIViewAnimationOptions,
+                       animations: () -> Void,
+                       completion: ((Bool) -> Void)?)
+    */
     
 }
