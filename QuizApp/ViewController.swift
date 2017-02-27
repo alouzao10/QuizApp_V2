@@ -46,12 +46,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentQuestionLabel.text = questions[currentQuestion]
-        
+        screenWidth = view.frame.width
         updateOffScreenLabel()
     }
     
     func updateOffScreenLabel() {
-        screenWidth = view.frame.width
+        //screenWidth = view.frame.width
         let space = UILayoutGuide()
         space.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         print("In update: \(space.layoutFrame.width)")
@@ -63,25 +63,25 @@ class ViewController: UIViewController {
         
         view.layoutIfNeeded()
         
-        let space = UILayoutGuide()
-        view.addLayoutGuide(space)
+        //let space = UILayoutGuide()
+        //view.addLayoutGuide(space)
        
-        screenWidth = view.frame.width
+        //screenWidth = view.frame.width
         
         print("In animate: \(screenWidth)")
-        space.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
+        //space.widthAnchor.constraint(equalToConstant: screenWidth).isActive = true
         //space.trailingAnchor.constraint(equalTo: space.leadingAnchor).isActive = true
         //space.leadingAnchor.constraint(equalTo: space.trailingAnchor).isActive = true
 
-        print(space.layoutFrame.width)
+        //print(space.layoutFrame.width)
         
-        self.nextQuestionLabelCenterXConstraint.constant = screenWidth
-        self.currentQuestionLabelCenterXConstraint.constant += screenWidth //screenWidth
+        self.nextQuestionLabelCenterXConstraint.constant = screenWidth/6 //0
+        self.currentQuestionLabelCenterXConstraint.constant += screenWidth/2 //screenWidth
         
-        UIView.animate(withDuration: 0.5,
+        UIView.animate(withDuration: 2.5,
                        delay: 0,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 0.5,
+                       usingSpringWithDamping: 2.5,
+                       initialSpringVelocity: 2.5,
                        options: [.curveLinear],
                        animations: {
                         self.currentQuestionLabel.alpha = 0
